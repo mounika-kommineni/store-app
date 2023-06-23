@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "143941870151",
+    "project_id": "appstore-650b2",
+    "storage_bucket": "appstore-650b2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:143941870151:android:cea4adede5fbabddd2c762",
+        "android_client_info": {
+          "package_name": "com.mouni.appstore"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "143941870151-qpfjo3sl48785is2qm5r6sf6mtjvrqqg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mouni.appstore",
+            "certificate_hash": "58b50a28eedaa1305a4ab1694f0f1ecdc6b4df5e"
+          }
+        },
+        {
+          "client_id": "143941870151-36bg6dnhksbve8cpjqu34uhdjkmi9e1h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDDXFNIn5PJuTFWqFRRx8ZXCV-Mm_KMhV0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "143941870151-36bg6dnhksbve8cpjqu34uhdjkmi9e1h.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
