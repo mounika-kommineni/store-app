@@ -19,24 +19,25 @@ class _LoginScreenState extends State<LoginScreen> {
   bool _isLoading = false;
 
   _loginUsers() async {
-     setState(() {
+    setState(() {
       _isLoading = true;
-     });
+    });
     if (_formKey.currentState!.validate()) {
       String res = await _authController.loginUsers(email, password);
       if (res == 'success') {
-        return  Navigator.pushReplacement(
+        return Navigator.pushReplacement(
           context,
           MaterialPageRoute(builder: (BuildContext context) {
-            return  MainScreen();
-          }),);
-      }else{
+            return MainScreen();
+          }),
+        );
+      } else {
         return showSnack(context, res);
       }
     } else {
-       setState(() {
+      setState(() {
         _isLoading = false;
-       });
+      });
       return showSnack(context, 'Please feilds most not be empty');
     }
   }
@@ -98,7 +99,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
               InkWell(
@@ -112,15 +113,19 @@ class _LoginScreenState extends State<LoginScreen> {
                     color: Colors.yellow.shade900,
                     borderRadius: BorderRadius.circular(10),
                   ),
-                  child: const Center(
-                    child: Text(
-                      'Login',
-                      style: TextStyle(
-                        fontSize: 18,
-                        letterSpacing: 3,
-                        color: Colors.white,
-                      ),
-                    ),
+                  child: Center(
+                    child: _isLoading
+                        ? CircularProgressIndicator(
+                            color: Colors.white,
+                          )
+                        : Text(
+                            'Login',
+                            style: TextStyle(
+                              fontSize: 18,
+                              letterSpacing: 3,
+                              color: Colors.white,
+                            ),
+                          ),
                   ),
                 ),
               ),

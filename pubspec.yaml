@@ -44,6 +44,8 @@ dependencies:
   firebase_storage: ^11.2.3
   image_picker: ^0.8.9
   carousel_slider: ^4.2.1
+  cached_network_image: ^3.2.3
+  shimmer_animation: ^2.1.0+1
 
   
 
