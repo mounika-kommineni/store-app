@@ -19,9 +19,9 @@ class _LoginScreenState extends State<LoginScreen> {
   bool _isLoading = false;
 
   _loginUsers() async {
-    // setState(() {
-    //   _isLoading = true;
-    // });
+     setState(() {
+      _isLoading = true;
+     });
     if (_formKey.currentState!.validate()) {
       String res = await _authController.loginUsers(email, password);
       if (res == 'success') {
@@ -34,9 +34,9 @@ class _LoginScreenState extends State<LoginScreen> {
         return showSnack(context, res);
       }
     } else {
-      // setState(() {
-      //   _isLoading = false;
-      // });
+       setState(() {
+        _isLoading = false;
+       });
       return showSnack(context, 'Please feilds most not be empty');
     }
   }
