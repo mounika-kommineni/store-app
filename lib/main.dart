@@ -1,5 +1,5 @@
 import 'package:appstore/firebase_options.dart';
-import 'package:appstore/views/buyers/auth/register_screen.dart';
+import 'package:appstore/vendor/views/auth/screens/main_vendor_screen.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
@@ -22,12 +22,12 @@ class MyApp extends StatelessWidget {
     //   const  SystemUiOverlayStyle(statusBarColor: Colors.transparent));
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
+      title: 'App Store',
       theme: ThemeData(
         primarySwatch: Colors.blue,
         fontFamily: 'Brand-Bold'
       ),
-      home:  RegisterScreen(),
+      home:  MainVendorScreen(),
     );
   }
 }
