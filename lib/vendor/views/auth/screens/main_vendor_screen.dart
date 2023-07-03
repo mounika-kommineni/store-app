@@ -16,35 +16,37 @@ class MainVendorScreen extends StatefulWidget {
 class _MainVendorScreenState extends State<MainVendorScreen> {
   int _pageIndex = 0;
 
-List<Widget> _pages =  [
-  EarningsScreen(),
-  UploadScreen(),
-  EditProductScreen(),
-  VendorOrderScreen(),
-  VendorLogoutScreen(),
-];
+  List<Widget> _pages = [
+    EarningsScreen(),
+    UploadScreen(),
+    EditProductScreen(),
+    VendorOrderScreen(),
+    VendorLogoutScreen(),
+  ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       bottomNavigationBar: BottomNavigationBar(
-        currentIndex: _pageIndex,
-        onTap: ((value){
-          setState(() {
-            _pageIndex = value;
-          });
-        }),
-        type: BottomNavigationBarType.fixed,
-        unselectedItemColor: Colors.black,
-        selectedItemColor: Colors.yellow.shade900,
-        items: const [
-        BottomNavigationBarItem(icon: Icon(Icons.currency_rupee), label: 'EARNINGS'),
-        BottomNavigationBarItem(icon: Icon(Icons.upload), label: 'UPLOAD'),
-        BottomNavigationBarItem(icon: Icon(Icons.edit), label: 'EDIT'),
-        BottomNavigationBarItem(icon: Icon(CupertinoIcons.shopping_cart), label: 'ORDERS'),
-        BottomNavigationBarItem(icon: Icon(Icons.logout), label: 'LOGOUT'),
-
-      ]),
+          currentIndex: _pageIndex,
+          onTap: ((value) {
+            setState(() {
+              _pageIndex = value;
+            });
+          }),
+          type: BottomNavigationBarType.fixed,
+          unselectedItemColor: Colors.black,
+          selectedItemColor: Colors.yellow.shade900,
+          items: const [
+            BottomNavigationBarItem(
+                icon: Icon(Icons.currency_rupee), label: 'EARNINGS'),
+            BottomNavigationBarItem(icon: Icon(Icons.upload), label: 'UPLOAD'),
+            BottomNavigationBarItem(icon: Icon(Icons.edit), label: 'EDIT'),
+            BottomNavigationBarItem(
+                icon: Icon(CupertinoIcons.shopping_cart), label: 'ORDERS'),
+            BottomNavigationBarItem(icon: Icon(Icons.logout), label: 'LOGOUT'),
+          ]),
+      body: _pages[_pageIndex],
     );
   }
 }
