@@ -50,7 +50,8 @@ dependencies:
   firebase_ui_oauth_google: ^1.2.3
   country_state_city_picker: ^1.2.8
   flutter_easyloading: ^3.0.5
-  
+  datetime_picker_formfield_new: ^2.1.0
+  provider: ^6.0.5
 
 dev_dependencies:
   flutter_test:

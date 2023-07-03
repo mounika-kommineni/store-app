@@ -1,7 +1,9 @@
 import 'package:appstore/firebase_options.dart';
+import 'package:appstore/provider/product_provider.dart';
 import 'package:appstore/vendor/views/auth/screens/main_vendor_screen.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 
 
@@ -10,7 +12,13 @@ void main() async {
   await Firebase.initializeApp(
     options:  DefaultFirebaseOptions.currentPlatform, 
     );
-  runApp(const MyApp());
+  runApp(MultiProvider(
+    providers: [
+      ChangeNotifierProvider(create: (_){
+        return ProductProvider();
+      }),
+    ],
+    child:const MyApp()));
 }
 
 class MyApp extends StatelessWidget {
