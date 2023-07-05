@@ -3,6 +3,7 @@ import 'package:appstore/provider/product_provider.dart';
 import 'package:appstore/vendor/views/auth/screens/main_vendor_screen.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:provider/provider.dart';
 
 
@@ -27,7 +28,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // SystemChrome.setSystemUIOverlayStyle(
-    //   const  SystemUiOverlayStyle(statusBarColor: Colors.transparent));
+    // const  SystemUiOverlayStyle(statusBarColor: Colors.transparent));
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'App Store',
@@ -35,7 +36,9 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         fontFamily: 'Brand-Bold'
       ),
-      home:  MainVendorScreen(),
+      home:  const MainVendorScreen(),
+      builder: EasyLoading.init(),
+
     );
   }
 }

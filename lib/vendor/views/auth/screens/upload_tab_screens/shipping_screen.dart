@@ -1,13 +1,24 @@
-
 import 'package:flutter/material.dart';
 
-class ShippingScreen extends StatelessWidget {
-  const ShippingScreen({super.key});
+class ShippingScreen extends StatefulWidget {
+
+  @override
+  State<ShippingScreen> createState() => _ShippingScreenState();
+}
+
+class _ShippingScreenState extends State<ShippingScreen> {
+  bool ? _chargeShipping = false;
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Text('Shipping'),
+    return Column(
+      children: [
+        CheckboxListTile(value: _chargeShipping, onChanged: (value){
+          setState(() {
+            _chargeShipping = value;
+           });
+        })
+      ],
     );
   }
 }

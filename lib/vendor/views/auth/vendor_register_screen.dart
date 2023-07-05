@@ -10,6 +10,8 @@ import '../../controllers/vendor_register_controller.dart';
 
 
 class VendorRegisterScreen extends StatefulWidget {
+ // const VendorRegisterScreen({super.key});
+
   @override
   State<VendorRegisterScreen> createState() => _VendorRegisterScreenState();
 }
@@ -137,11 +139,11 @@ class _VendorRegisterScreenState extends State<VendorRegisterScreen> {
                         }
                       },
                       keyboardType: TextInputType.name,
-                      decoration: InputDecoration(
+                      decoration: const InputDecoration(
                         labelText: 'Business Name',
                         ),
                     ),
-                    SizedBox(height: 10),
+                   const SizedBox(height: 10),
                     TextFormField(
                       onChanged: (value){
                         email = value;
@@ -154,11 +156,11 @@ class _VendorRegisterScreenState extends State<VendorRegisterScreen> {
                         }
                       },
                       keyboardType: TextInputType.emailAddress,
-                      decoration: InputDecoration(
+                      decoration: const InputDecoration(
                         labelText: 'Email Address',
                         ),
                     ),
-                    SizedBox(height: 10),
+                   const  SizedBox(height: 10),
                     TextFormField(
                       onChanged: (value){
                         phoneNumber = value;
@@ -171,11 +173,11 @@ class _VendorRegisterScreenState extends State<VendorRegisterScreen> {
                         }
                       },
                       keyboardType: TextInputType.number,
-                      decoration: InputDecoration(
+                      decoration: const InputDecoration(
                         labelText: 'Phone Number',
                         ),
                     ),
-                    SizedBox(height: 10),
+                   const SizedBox(height: 10),
                     Padding(
                       padding: const EdgeInsets.all(8),
                       child: SelectState(
@@ -201,7 +203,7 @@ class _VendorRegisterScreenState extends State<VendorRegisterScreen> {
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Text(
+                          const Text(
                             'Tax Registered?',
                             style: TextStyle(
                               fontSize: 16,
@@ -243,7 +245,7 @@ class _VendorRegisterScreenState extends State<VendorRegisterScreen> {
                           return null;
                         }
                       },
-                          decoration: InputDecoration(labelText: 'Tax Number'),
+                          decoration: const InputDecoration(labelText: 'Tax Number'),
                         ),
                       ),
                     InkWell(
@@ -257,7 +259,7 @@ class _VendorRegisterScreenState extends State<VendorRegisterScreen> {
                           color: Colors.yellow.shade900,
                           borderRadius: BorderRadius.circular(10),
                         ),
-                        child: Center(
+                        child: const Center(
                             child: Text(
                           'Save',
                           style: TextStyle(
