@@ -56,7 +56,7 @@ class AccountScreen extends StatelessWidget {
            Padding(
             padding: EdgeInsets.all(4),
             child: Text(
-              data['fullName'],
+              data['FullName'],
               style: const TextStyle(
                 fontSize: 17,
                 fontWeight: FontWeight.bold,
@@ -66,7 +66,7 @@ class AccountScreen extends StatelessWidget {
            Padding(
             padding: EdgeInsets.all(4),
             child: Text(
-              data['email'],
+              data['Email'],
               style: const TextStyle(
                 fontSize: 15,
                 fontWeight: FontWeight.bold,

@@ -43,8 +43,11 @@ class UploadScreen extends StatelessWidget {
         bottomSheet: Padding(
           padding: const EdgeInsets.all(8.0),
           child: ElevatedButton(
+            style: ElevatedButton.styleFrom(
+              primary: Colors.yellow.shade900,
+            ),
             onPressed: () {
-              print(_productProvider.productData['prodcutName']);
+              print(_productProvider.productData['productName']);
               print(_productProvider.productData['quantity']);
               print(_productProvider.productData['productPrice']);
               print(_productProvider.productData['category']);

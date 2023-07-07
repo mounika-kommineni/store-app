@@ -120,7 +120,8 @@ class _GeneralScreenState extends State<GeneralScreen> {
                           context: context,
                           initialDate: DateTime.now(),
                           firstDate: DateTime.now(),
-                          lastDate: DateTime(5000)).then((value) {
+                          lastDate: DateTime(5000))
+                          .then((value) {
                             setState(() {
                               _productProvider.getFormData(scheduleDate: value);
                             });
